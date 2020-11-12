@@ -14,7 +14,7 @@ Netconf Protocol is described in [RFC6241](https://tools.ietf.org/html/rfc6241) 
 scrapli_netconf is a modern netconf client python library that helps us to interact with devices. The scrapli_netconf docs says it supports the following platforms: IOS-XE, IOS-XR and Junos. NXOS is not in the list but I've found out it does work pretty good with nexuses too
 
 ## the lab
-The lab is consist of two parts:  
+The lab consists of two parts:  
 1. configuring vlans and SVIs
 2. configuring evpn l2vni (vlan, anycast svi, vtep interface, bgp evp section)
 
@@ -32,8 +32,12 @@ each class has 3 public methods:
 
 ## 1. configuring vlans and SVIs
 
-In this part I'm using the public available cisco netconf sandbox.  
-That's the connection options:
+In this part I've been using one of the Open NX-OS Sandboxes from Cisco.  
+There several such sandboxes you can choose from. I ran into one of these sandboxes when I was taking the course [NETCONF/YANG on Nexus: Part 1 - Learning to use the Cisco NXOS YANG Model](https://developer.cisco.com/learning/lab/yang_devnet-format_part1/step/1)  
+I hope Cisco won't mind if I use the same sandbox for my code.  
+Here is a link to that very sandbox: [The "Open NX-OS Programmability" Always On Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/dae38dd8-e8ee-4d7c-a21c-6036bed7a804?diagramType=Topology)
+
+And these are the connection options we'll be using to play with the sandbox:
 ```python
 sandbox = {
     "host": "sbx-nxos-mgmt.cisco.com",
